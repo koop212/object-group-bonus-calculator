@@ -1,3 +1,6 @@
+console.log('js');
+
+
 const employees = [
   {
     name: 'Atticus',
@@ -32,6 +35,44 @@ const employees = [
 ];
 
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
+
+//loop through employee array
+let employeeBonusInfo = {
+  name:'',
+  bonusPercentage: 0,
+  totalCompensation: 0,
+  totalBonus: 0
+}; //creating new employee object
+let employee = {
+  name: '',
+  employeeNumber: '',
+  annualSalary: '',
+  reviewRating: 0
+};
+//let bonusPercentage = 0;
+
+
+  function bonusCalculation(employee) {
+    for (i = 0; i < employees.length; i++) {
+      employee = employees[i];
+      console.log(employees[i]);
+    if (employee.reviewRating <= 2) {      
+      employeeBonusInfo.bonusPercentage = 0;
+      console.log(employeeBonusInfo);
+    } else if (employees[i].reviewRating === 3) {
+      employeeBonusInfo.bonusPercentage = 4;
+      console.log(employeeBonusInfo);
+    } else if (employees[i].reviewRating === 4) {
+      employeeBonusInfo.bonusPercentage = 6; 
+      console.log(employeeBonusInfo);
+  } else if (employees[i].reviewRating === 5) {
+    employeeBonusInfo.bonusPercentage = 10;
+      console.log(employeeBonusInfo);
+  }
+  }//end loop
+  
+  
+}
 
 // Take small steps! Don't write a for loop and two functions that do all of the calculations right away.
 // This problem is massive! Break the problem down. Use the debugger.
